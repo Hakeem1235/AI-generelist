@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, DollarSign, Layers, Users } from 'lucide-react';
+import { Zap, DollarSign, Layers, Users, Building2 } from 'lucide-react';
 import SectorCarousel from './SectorCarousel';
 
 const Sectors = () => {
