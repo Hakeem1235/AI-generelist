@@ -87,13 +87,63 @@ const Sectors = () => {
           </div>
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        <div className="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 text-center">
             How Organizations Benefit
           </h3>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 text-center mb-12">
             Tangible advantages that drive real business transformation
           </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex items-start mb-4">
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <Zap className="w-6 h-6 text-blue-600" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Faster Time to Value</h4>
+                  <p className="text-gray-600">Deploy AI solutions in weeks, not months, with rapid prototyping and agile implementation</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex items-start mb-4">
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <DollarSign className="w-6 h-6 text-green-600" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Reduced Development Costs</h4>
+                  <p className="text-gray-600">Leverage existing AI APIs and no-code tools instead of expensive custom development</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex items-start mb-4">
+                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <Users className="w-6 h-6 text-purple-600" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Bridge Technical Gaps</h4>
+                  <p className="text-gray-600">Connect technical teams with business stakeholders for aligned, effective AI initiatives</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="flex items-start mb-4">
+                <div className="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <Layers className="w-6 h-6 text-pink-600" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Scale AI Adoption</h4>
+                  <p className="text-gray-600">Spread AI capabilities across departments with consistent governance and best practices</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
