@@ -5,9 +5,9 @@ const Hero = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('english');
 
   const videos = {
-    english: 'VIb-PinFiMo',
-    telugu: 'E3bZHaxvwCg',
-    hindi: 'oJX4W_2MQBU'
+    english: 'https://www.youtube.com/embed/VIb-PinFiMo',
+    telugu: 'https://www.youtube.com/embed/E3bZHaxvwCg',
+    hindi: 'https://www.youtube.com/embed/oJX4W_2MQBU'
   };
 
   return (
@@ -46,13 +46,12 @@ const Hero = () => {
                   key={selectedLanguage}
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/${videos[selectedLanguage]}?rel=0&modestbranding=1`}
+                  src={videos[selectedLanguage]}
                   title="AI Generalist Video"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   className="w-full h-full"
-                  style={{ border: 'none' }}
                 ></iframe>
               </div>
 
