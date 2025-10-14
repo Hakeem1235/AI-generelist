@@ -41,17 +41,18 @@ const Hero = () => {
           {/* Left side - Video Section */}
           <div className="animate-slideInLeft order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/90 backdrop-blur-sm p-4">
-              <div className="aspect-video rounded-xl overflow-hidden">
+              <div className="aspect-video rounded-xl overflow-hidden bg-gray-900">
                 <iframe
                   key={selectedLanguage}
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/${videos[selectedLanguage]}?autoplay=1&mute=1`}
+                  src={`https://www.youtube.com/embed/${videos[selectedLanguage]}?rel=0&modestbranding=1`}
                   title="AI Generalist Video"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   className="w-full h-full"
+                  style={{ border: 'none' }}
                 ></iframe>
               </div>
 
