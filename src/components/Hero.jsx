@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 const Hero = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState('english');
+
+  const videos = {
+    english: 'VIb-PinFiMo',
+    telugu: 'E3bZHaxvwCg',
+    hindi: 'oJX4W_2MQBU'
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-purple-50 to-blue-100">
       {/* Animated background elements */}
@@ -28,45 +36,101 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
-        <div className="animate-scaleIn mb-6">
-          <div className="inline-block px-6 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full border border-blue-500/20 backdrop-blur-sm mb-4">
-            <h2 className="text-xl md:text-2xl font-bold">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                AI-Powered Business Growth Analyst
-              </span>
-            </h2>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left side - Video Section */}
+          <div className="animate-slideInLeft order-2 lg:order-1">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/90 backdrop-blur-sm p-4">
+              <div className="aspect-video rounded-xl overflow-hidden">
+                <iframe
+                  key={selectedLanguage}
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${videos[selectedLanguage]}?autoplay=1&mute=1`}
+                  title="AI Generalist Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+
+              {/* Language Selection Buttons */}
+              <div className="flex gap-3 mt-4 justify-center">
+                <button
+                  onClick={() => setSelectedLanguage('english')}
+                  className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedLanguage === 'english'
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  English
+                </button>
+                <button
+                  onClick={() => setSelectedLanguage('telugu')}
+                  className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedLanguage === 'telugu'
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  Telugu
+                </button>
+                <button
+                  onClick={() => setSelectedLanguage('hindi')}
+                  className={`px-6 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedLanguage === 'hindi'
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  Hindi/Urdu
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <h1 className="text-6xl md:text-8xl font-bold mb-8 animate-fadeInUp delay-200 leading-tight">
-          <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent inline-block hover:scale-105 transition-transform duration-300">
-            AI Generalist
-          </span>
-        </h1>
+          {/* Right side - Content Section */}
+          <div className="text-center lg:text-left order-1 lg:order-2">
+            <div className="animate-scaleIn mb-4">
+              <h2 className="text-4xl md:text-6xl font-bold mb-4">
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  AI-Powered Business Growth Analyst
+                </span>
+              </h2>
+            </div>
 
-        <p className="text-2xl md:text-3xl text-gray-800 font-semibold mb-6 animate-fadeInUp delay-400 max-w-4xl mx-auto">
-          Driving business growth through smart AI-powered strategies, data, and automation.
-        </p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fadeInUp delay-200 leading-tight">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent inline-block hover:scale-105 transition-transform duration-300">
+                AI Generalist
+              </span>
+            </h1>
 
-        <p className="text-base md:text-lg text-gray-600 max-w-4xl mx-auto mb-12 animate-fadeInUp delay-500 leading-relaxed">
-          The multidisciplinary professional who connects business strategy with AI power — acting as connectors, translators, and implementers to transform AI awareness into adoption.
-        </p>
+            <p className="text-xl md:text-2xl text-gray-800 font-semibold mb-6 animate-fadeInUp delay-400 lg:mx-0">
+              Driving business growth through smart AI-powered strategies, data, and automation.
+            </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scaleIn delay-700">
-          <a
-            href="#overview"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 group animate-glow"
-          >
-            Explore the Role
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-          </a>
-          <a
-            href="#impact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white/90 backdrop-blur-sm text-gray-800 rounded-xl font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 border border-gray-200"
-          >
-            See Impact Areas
-          </a>
+            <p className="text-base md:text-lg text-gray-600 mb-8 animate-fadeInUp delay-500 leading-relaxed lg:mx-0">
+              The multidisciplinary professional who connects business strategy with AI power — acting as connectors, translators, and implementers to transform AI awareness into adoption.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-scaleIn delay-700">
+              <a
+                href="#overview"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 group animate-glow"
+              >
+                Explore the Role
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+              </a>
+              <a
+                href="#impact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/90 backdrop-blur-sm text-gray-800 rounded-xl font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-105 border border-gray-200"
+              >
+                See Impact Areas
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Feature highlights */}
