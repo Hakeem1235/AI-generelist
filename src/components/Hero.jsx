@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Video Section */}
           <div className="animate-slideInLeft order-2 lg:order-1">
-            <div className="mb-6 flex justify-center">
+            <div className="mb-6 flex justify-center bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 rounded-2xl py-6 px-8 shadow-xl">
               <img
                 src="/64395604255-removebg-preview.png"
                 alt="Neunex AI and Analytics"
