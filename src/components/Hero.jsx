@@ -167,6 +167,13 @@ const Hero = () => {
             <p className="text-gray-600 leading-relaxed">Connect technical teams with business goals</p>
           </div>
         </div>
+
+        {/* Presented By Line */}
+        <div className="text-center mt-16 animate-fadeInUp delay-1000">
+          <p className="text-lg md:text-xl text-gray-700 font-semibold">
+            Presented By <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">NeuNex AI & Analytics</span>
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -57,7 +57,10 @@ const Footer = () => {
             </span>
           </div>
           <p className="text-gray-400 mb-2">AI-Powered Business Growth Analyst</p>
-          <p className="text-gray-500 text-sm">Driving business growth through smart AI-powered strategies, data, and automation</p>
+          <p className="text-gray-500 text-sm mb-4">Driving business growth through smart AI-powered strategies, data, and automation</p>
+          <p className="text-gray-300 text-base font-semibold mt-6">
+            Presented By <span className="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">NeuNex AI & Analytics</span>
+          </p>
         </div>
       </div>
     </footer>
