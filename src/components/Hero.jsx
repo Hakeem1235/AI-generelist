@@ -40,6 +40,13 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Video Section */}
           <div className="animate-slideInLeft order-2 lg:order-1">
+            <div className="mb-6 flex justify-center">
+              <img
+                src="/64395604255.png"
+                alt="Neunex AI and Analytics"
+                className="h-16 md:h-20 w-auto"
+              />
+            </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/90 backdrop-blur-sm p-4">
               <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                 <iframe
